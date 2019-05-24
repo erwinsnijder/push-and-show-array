@@ -3,19 +3,32 @@
 <html lang="en">
         <head>
         <title>push en show</title>
-    <script>
-        var myarray= [];
-        function pushFunction() {
-            myarray.push('test');
-        }
+        <script>
+            var myarray= [];
+            var myarray2= [];
 
-        function showFunction() {
-            console.log(myarray)
-}
-        </script>
+            function pushFunction() {
+                myarray.push('test');
+            }
+            function push2Function() {
+                myarray2.push(' function ');
+            }
+            function showFunction() {
+                console.table(myarray)
+                console.table(myarray2)
+    }
+    function printFunction() {
+        var myarray3 = myarray.concat(myarray2); 
+        
+        document.getElementById("print").innerHTML = myarray3;
+        }
+            </script>
 </head>
 <body>
         <button onclick="pushFunction()">push</button>
+        <button onclick="push2Function()">push2</button>
         <button onclick="showFunction()">show</button>
+        <button onclick="printFunction()">print</button>
+        <p id= print></p>
 </body>
 </html>
